@@ -32,6 +32,13 @@ public class Aggregator {
             byte[] requestPayload = task.getBytes(); // 작업 문자열을 바이트 배열로 변환 (HTTP 요청 본문)
 
             futures[i] = webClient.sendTasks(workerAddress, requestPayload); // WebClient를 통해 비동기 POST 요청 전송 후 CompletableFuture 저장
+
+            // 커넥션 풀링을 확인하기 위한 sleep time
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
         }
 
         List<String> results = Stream.of(futures) // CompletableFuture 배열을 스트림으로 변환
