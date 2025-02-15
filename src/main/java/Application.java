@@ -3,8 +3,8 @@ import java.util.List;
 
 public class Application {
 
-    private static final String WORKER_ADDRESS_1 = "http://localhost:8081/tasks"
-    private static final String WORKER_ADDRESS_2 = "http://localhost:8082/tasks"
+    private static final String WORKER_ADDRESS_1 = "http://localhost:8081/tasks";
+    private static final String WORKER_ADDRESS_2 = "http://localhost:8082/tasks";
 
     public static void main(String[] args) {
 
