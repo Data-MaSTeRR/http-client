@@ -15,7 +15,8 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.example.Application</mainClass>
+                            <!-- 실제 Application 클래스가 default package에 있으므로 수정 -->
+                            <mainClass>Application</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
@@ -34,7 +35,6 @@
             </plugin>
         </plugins>
     </build>
-
 
     <properties>
         <maven.compiler.source>22</maven.compiler.source>
